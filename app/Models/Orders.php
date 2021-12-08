@@ -11,6 +11,6 @@ class Orders extends Model
     use HasFactory;
     protected $table = 'orders';
     const CREATED_AT = null;
-    const UPDATE_AT = null;
+    const UPDATED_AT = null;
     protected $guarded = [];
 }
