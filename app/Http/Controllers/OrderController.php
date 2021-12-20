@@ -64,9 +64,9 @@ class OrderController extends BaseController
 
         $product = Products::find($order->product_id);
 
-        // if ($product == null) {
-        //     return $this->out(status:'Gagal', code:404, error:['Produk Tidak Ditemukan']);
-        // }
+        if ($product == null) {
+            return $this->out(status:'Gagal', code:404, error:['Produk Tidak Ditemukan']);
+        }
 
         $order->product_id  = $product->id;
         $order->customer_id = $order->customer_id;
